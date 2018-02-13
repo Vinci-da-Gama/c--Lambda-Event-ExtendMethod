@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+./Lambda_Event_ExtendMethod-Solu/.vs/
+./Lambda_Event_ExtendMethod-Solu/.vscode/
+./Lambda_Event_ExtendMethod-Solu/Lambda_Event_ExtendMethod_Pj/bin/
+./Lambda_Event_ExtendMethod-Solu/Lambda_Event_ExtendMethod_Pj/obj/
+
+
 # User-specific files
 *.suo
 *.user
