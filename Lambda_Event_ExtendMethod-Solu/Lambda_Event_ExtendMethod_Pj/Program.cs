@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Lambda_Event_ExtendMethod_Pj.LambdaClasses;
 using Lambda_Event_ExtendMethod_Pj.EventClasses;
+using Lambda_Event_ExtendMethod_Pj.ExtendMethodClasses;
 
 namespace Lambda_Event_ExtendMethod_Pj
 {
@@ -37,8 +38,22 @@ namespace Lambda_Event_ExtendMethod_Pj
             // Events now...
             Video OneVideo = new Video() { Title = "VideoTitle_0" };
             VideoEndoder vEncoder = new VideoEndoder();
+            EmailService es = new EmailService();
+            MessageService ms = new MessageService();
+
+            vEncoder.VideoEncodedEvent += es.OnVideoEncoding;
+            vEncoder.VideoEncodedEvent += ms.OnVideoEncoded;
+
             vEncoder.Encode(OneVideo);
 
+            // Extended Methods now...
+            string aStr = "With silver footballs, icy-pole goal posts and circus acrobats, Australian rules' supercharged version AFLX has sceptics and traditionalists raising their eyebrows.";
+            string shortenPost = aStr.Shorten(5);
+            Console.WriteLine($"The short post is --> {shortenPost}");
+
+            List<int> NumList = new List<int>() { 1,3,5,12,56,88,32,66 };
+            int maxNum = NumList.Max();
+            Console.WriteLine($"Max number is: {maxNum}.");
 
             Console.WriteLine("Pls press enter to quite...");
             while(Console.ReadKey().Key != ConsoleKey.Enter) {}

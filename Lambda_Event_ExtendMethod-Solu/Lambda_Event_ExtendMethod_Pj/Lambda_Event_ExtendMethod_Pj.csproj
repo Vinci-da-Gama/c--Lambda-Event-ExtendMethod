@@ -42,8 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventClasses\EmailService.cs" />
+    <Compile Include="EventClasses\MessageService.cs" />
     <Compile Include="EventClasses\Video.cs" />
     <Compile Include="EventClasses\VideoEndoder.cs" />
+    <Compile Include="EventClasses\VideoEventArgs.cs" />
+    <Compile Include="ExtendMethodClasses\shortenWords.cs" />
     <Compile Include="LambdaClasses\Book.cs" />
     <Compile Include="LambdaClasses\BookList.cs" />
     <Compile Include="Program.cs" />
@@ -52,8 +56,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExtendMethodClasses\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
